@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<% if @product.comments.size > 0 %>
+	<h2>Comments</h2>
+	<% for comment in @product.comments %>
+	<h3><%= comment.name %></h3>
+	<p><%= comment.content %></p>
+	<% end %>
+<% end %>
+
+<h2> New comment </h2>
+
+<%= form_for [@product, Comment.new] do |f| %>
+	<p><%= f.label :name %> <%= f.text_field :name %></p>
+	<p><%= f.text_area :content, :rows => 10 %> 
+	<p><%= f.submit %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
