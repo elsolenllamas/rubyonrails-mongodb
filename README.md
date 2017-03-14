@@ -1,24 +1,17 @@
-# README
+# Ruby on Rails + MongoDB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This example shows the Ruby on Rails connection with a mongo database, using mongoid.<br/><br/>
+So its possible to add, edit and delete records from the database.<br/><br/>
 
-Things you may want to cover:
+The gems required added to the Gemfile are :<br/>
+* gem 'mongo'
+* gem 'mongoid'
+* gem 'bson_ext'
 
-* Ruby version
+The example show a products collection associated with comments.<br/><br/>
 
-* System dependencies
+To run the sample run the command: "rails server" and open localhost:3000<br/>
+Also is requerid a local database : "newmongo_development" setted up under the directory config/mongoid.yml<br/><br/>
 
-* Configuration
+You can add easily new models and controllers using the command: "rails g generate ..."
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
